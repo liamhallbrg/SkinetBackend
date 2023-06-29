@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{9E85B21E-EC09-4C2C-BD89-22EB91EA2EFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{D259ED4C-2049-4266-B984-C9DB6C593BCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{76033CE3-8B10-43F0-AF0A-F9DD1D2E6DFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E85B21E-EC09-4C2C-BD89-22EB91EA2EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E85B21E-EC09-4C2C-BD89-22EB91EA2EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E85B21E-EC09-4C2C-BD89-22EB91EA2EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E85B21E-EC09-4C2C-BD89-22EB91EA2EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D259ED4C-2049-4266-B984-C9DB6C593BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D259ED4C-2049-4266-B984-C9DB6C593BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D259ED4C-2049-4266-B984-C9DB6C593BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D259ED4C-2049-4266-B984-C9DB6C593BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76033CE3-8B10-43F0-AF0A-F9DD1D2E6DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76033CE3-8B10-43F0-AF0A-F9DD1D2E6DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76033CE3-8B10-43F0-AF0A-F9DD1D2E6DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76033CE3-8B10-43F0-AF0A-F9DD1D2E6DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1F92B21-4EB6-4069-BAF1-ED531EEA0452}
+	EndGlobalSection
+EndGlobal
