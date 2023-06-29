@@ -15,4 +15,9 @@
     <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Data\SeedData\" />
+  </ItemGroup>
+
 </Project>
