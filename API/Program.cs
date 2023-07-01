@@ -13,8 +13,8 @@ builder.Services.AddDbContext<StoreContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
@@ -27,7 +27,7 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 
-
+app.UseStaticFiles();
 app.UseAuthorization();
 app.MapControllers();
 
