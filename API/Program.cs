@@ -1,9 +1,6 @@
-using API.Errors;
 using API.Extensions;
 using API.Middleware;
-using Core.Interfaces;
 using Infrastructure.Data;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +21,7 @@ app.UseSwaggerUI();
 //app.UseHttpsRedirection();
 
 app.UseStaticFiles();
+app.UseCors("CorsPolicy");
 app.UseAuthorization();
 app.MapControllers();
 
@@ -42,8 +40,5 @@ catch (Exception ex)
 {
     logger.LogError(ex, "An error occured during migration");
 }
-
-
-
 
 app.Run();

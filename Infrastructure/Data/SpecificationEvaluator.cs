@@ -1,5 +1,5 @@
 ﻿using Core.Entities;
-using Core.Specifications;
+using Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,9 +15,24 @@ namespace Infrastructure.Data
         {
             var query = inputQuery;
 
-            if (specification.Criteria != null) 
+            if (specification.Criteria is not null) 
             {
                 query = query.Where(specification.Criteria);
+            }
+
+            if (specification.OrderBy is not null)
+            {
+                query = query.OrderBy(specification.OrderBy);
+            }
+
+            if (specification.OrderByDescending is not null)
+            {
+                query = query.OrderByDescending(specification.OrderByDescending);
+            }
+
+            if (specification.IsPagingEnabled)
+            {
+                query = query.Skip(specification.Skip).Take(specification.Take);
             }
 
             query = specification.Includes.Aggregate(query, (current, include) => current.Include(include));
